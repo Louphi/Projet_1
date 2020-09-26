@@ -8,7 +8,7 @@ h = 20  # en mm
 
 # Conversion de GPa en N/mm**2
 
-E = E * 10 ** 3
+E = E * (10 ** 3)
 
 # Calcul de l'inertie
 
@@ -19,3 +19,4 @@ formule_delta_max = (F * L ** 3) / ( 3 * E * I)
 delta_max = round(formule_delta_max,2)
 
 print(f"La déformation maximale de la poutre est {delta_max} mm")
+

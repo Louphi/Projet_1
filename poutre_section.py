@@ -7,7 +7,7 @@ L = 100  # en mm
 
 #Conversion de GPa en N/mm**2
 
-E = E * 10 ** 3
+E = E * (10 ** 3)
 
 # poutre rectangulaire
 b = 10  # en mm
@@ -30,10 +30,10 @@ I_creuse = (math.pi * (D ** 4 - d ** 4)) / 64
 
 # liste des types et valeurs de I pour chaque type
 liste_type_and_I = [
-    ("carree", I_carree),
     ("rectangulaire", I_rectangulaire),
-    ("creuse", I_creuse),
-    ("ronde", I_ronde)
+    ("carree", I_carree),
+    ("ronde", I_ronde),
+    ("creuse", I_creuse)
 ]
 
 # Numero des index pour la liste des types et des valeurs de I
@@ -58,7 +58,6 @@ type_optimal = liste_type_and_I[liste_delta.index(delta_optimale)]
 print(f'Le type de section minimisant la déformation maximale '
       f'est {type_optimal[INDEX_TYPE]}, avec une déformation de '
       f'{delta_optimale} mm')
-
 
 
 
